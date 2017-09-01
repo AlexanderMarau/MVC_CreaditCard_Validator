@@ -1,0 +1,13 @@
+﻿@model TarjetaCredito.Models.TarjetaCredito
+
+@{
+    ViewBag.Title = "ValidacionExitosa";
+}
+
+<h2>ValidacionExitosa</h2>
+
+<div>
+    <p>La validación de la Tarjeta de crédito @Model.numero fue exitosa</p>
+</div>
+@Html.ActionLink("Validar otra tarjeta", "Validar","TarjetaCredito", null, 
+    new {@class = "btn btn-primary" })

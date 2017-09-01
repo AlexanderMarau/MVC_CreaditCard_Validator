@@ -1,0 +1,37 @@
+﻿@model TarjetaCredito.Models.TarjetaCredito
+
+@{
+    ViewBag.Title = "Validar";
+}
+
+<h2>Validar</h2>
+
+<form id="formulario" action="#" method="POST">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="txtNumero" class="control-label">Número de Tarjeta de Crédito</label>
+        @if (Model != null)
+        {
+            <input type="text" id="txtNumero" name="numero" class="form-control" value="@Model.numero" />
+            <div class="danger">Tarjeta de crédito no pudo ser validada</div>
+        }
+        else
+        {
+            <input type="text" id="txtNumero" name="numero" class="form-control" />
+        }
+        
+    </div>
+    <input type="submit" class="btn btn-primary" />
+
+</form>
+
+<script>
+    $("#formulario").submit(function () {
+        var numeroTarjeta = $("#txtNumero").val()
+        miRegex = /^\d{16}$/
+        if (!miRegex.test(numeroTarjeta)) {
+            alert("Deben ser 16 dígitos")
+            return false;
+        }
+    })
+</script>
