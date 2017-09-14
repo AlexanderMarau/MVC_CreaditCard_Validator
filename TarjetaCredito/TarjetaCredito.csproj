@@ -147,6 +147,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\TarjetaCredito.cs" />
+    <Compile Include="Models\TarjetaCreditoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +189,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\TarjetaCredito\Validar.cshtml" />
     <Content Include="Views\TarjetaCredito\ValidacionExitosa.cshtml" />
+    <Content Include="Views\TarjetaCredito\ListarTarjetas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

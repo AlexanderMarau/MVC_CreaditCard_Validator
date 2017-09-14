@@ -32,5 +32,12 @@ namespace TarjetaCredito.Controllers
             else
                 return View();
         }
+
+        public ActionResult ListarTarjetas()
+        {
+            List<TarjetaCredito.Models.TarjetaCredito> listado = TarjetaCreditoDAL.obtenerTarjetas();
+            return View(listado);
+
+        }
     }
 }

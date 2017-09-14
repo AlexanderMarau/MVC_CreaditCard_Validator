@@ -1,0 +1,17 @@
+﻿@model List<TarjetaCredito.Models.TarjetaCredito>
+@{
+    ViewBag.Title = "ListarTarjetas";
+}
+
+<h2>ListarTarjetas</h2>
+
+<ul>
+    @foreach(var tarjeta in Model)
+    {
+        <li>
+            @tarjeta y su estado es @(tarjeta.validar()?
+            Html.Raw("<span style='background:lime; margin:4px;'>Aceptada</span>"):
+            Html.Raw("<span style='background:orange;margin:4px;'>INVALIDA</span>"))
+        </li>
+    }
+</ul>

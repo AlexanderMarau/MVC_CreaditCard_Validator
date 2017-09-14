@@ -41,7 +41,7 @@ namespace TarjetaCredito.Models
             }
         }
 
-        public static List<bool> validatTarjetas(List<TarjetaCredito> lista)
+        public static List<bool> validarTarjetas(List<TarjetaCredito> lista)
         {
             List<bool> listaResultados = new List<bool>();
             foreach (var tarjeta in lista)
@@ -49,6 +49,11 @@ namespace TarjetaCredito.Models
                 listaResultados.Add(tarjeta.validar());
             }
             return listaResultados;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("Tarjeta de Crédito No. {0}", numero);
         }
     }
 }
